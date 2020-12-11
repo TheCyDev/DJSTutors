@@ -1,0 +1,76 @@
+{
+	"GLOBAL": {
+	 "EVERYONE": "Каждый",
+	 "NONE": "Отсутствует",
+	 "ERROR": "Ошибка",
+	 "NAME": "Название",
+	 "DESCRIPTION": "Описание",
+	 "REASON": "Причина",
+	 "URL": "URL",
+	 "YES": "Да",
+	 "NO": "Нет",
+	 "TIME":"Время",
+	 "PREFIX":"Префикс",
+	 "PREFIX_SETTED":"Префикс Сменён"
+	},
+	"GUILD": {
+		"WELCOME_CHANNEL":"Канал Приветствия",
+		"LEAVE_CHANNEL":"Канал Прощения",
+		"ANNOUNCE_CHANNEL":"Канал Объявлений",
+		"SUGGEST_CHANNEL":"Канал Предложений",
+		"TESTING_CHANNEL":"Канал Тестирования",
+		"COMMUNICATION_CHANNEL":"Канал Общения",
+		"QUESTION_CHANNEL":"Канал Вопросов",
+		"CODING_CHANNEL":"Канал Кодинга",
+		"SPAM_CHANNEL":"Канал Спама",
+		"FLOOD_CHANNEL":"Канал Флуда",
+		"MEME_CHANNEL":"Канал Мемов",
+		"IMAGE_CHANNEL":"Канал Изображений",
+		"EVENT_CHANNEL":"Канал Событий",
+		"POLL_CHANNEL":"Канал Опросов",
+		"VOTE_CHANNEL":"Канал Голосований",
+		"SYSTEM_CHANNEL":"Канал Системы",
+		"BOT_CHANNEL":"Канал Ботов",
+		"COMMAND_CHANNEL":"Канал Команд",
+		"RULES_CHANNEL":"Канал Правил",
+		"NEWS_CHANNEL":"Канал Новостей",
+		"INFO_CHANNEL":"Канал Информации",
+		"BUGS_CHANNEL":"Канал Багов",
+		"REPORT_CHANNEL":"Канал Жалоб",
+		"FEATURES_CHANNEL":"Канал Особенностей",
+		"STATUSES_CHANNEL":"Канал Статусов",
+		"GAMES_CHANNEL":"Канал Игр",
+		"FEEDBACKS_CHANNEL":"Канал Отзывов",
+		"GIVEAWAYS_CHANNEL":"Канал Розыгрышов"
+	},
+	"ECONOMY":{
+		"DAILY":"Ежедневно",
+		"DAILY_TIME":"Подожди ещё 24 часа!",
+		"DAILY_GIVED":"Ежедневно вы получите рандом до 1000",
+		"MINE":"Майн",
+		"MINE_GIVED":"Вы получили деньги за майнинг!"
+	},
+	"ADMIN":{
+		"NO_USER":"Укажите пользователя!",
+		"NO_REASON":"Укажите причину!",
+		"NO_TIME":"Укажите время!"
+	},
+	"DIALOG":{
+		"HELLO":"Здравствуйте!",
+		"HI":"Привет!",
+		"HOW_ARE_YOU":"Как дела",
+		"CAN_I_HAVE_A_CUP_OF_TEA":"Можно мне чашку чая?"
+	},
+	"KEYS":{
+		"HOME":"Дом",
+		"SHOP":"Магазин",
+		"DURKA":"Дурка",
+		"HOSPITAL":"Больница"
+	},
+	"SETTINGS":{
+		"database":"Command%20Handling$&&6#;",
+		"ip":"Hdkdn37jJdj47xvbSb",
+		"id":"838@9928382992928$+$+@98$+$&",
+		"password":"yakiprime$-+#2020/2021"
+	}
+}
