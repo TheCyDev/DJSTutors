@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const config = require('../../config.json')
-
 module.exports = {
 	name: 'help',
 	description: 'Помощь по боту',
@@ -38,15 +37,13 @@ module.exports = {
   .addField(`Администрация`, admin);
   message.channel.send(embed)
  }
+ if(args[0]) {
   let com = args[0]
   const command = client.commands.get(com) || client.commands.find(c => c.aliases && c.aliases.includes(com))
   if(command.admin) return
 if(!command) {
 	return message.reply(`Я не нашла эту команду!`)
 }
-const data = []
-if(command.aliases) data.push(`\nПсевдонимы: **${prefix}${command.name} ${command.use || '(Использование не показано)'}**`)
- 
  if(command.category === "economy") command.category = 'Экономика'
  if(command.category === "utils") command.category = 'Утилиты'
  if(command.category === "rp") command.category = 'Рп'
@@ -57,8 +54,9 @@ if(command.aliases) data.push(`\nПсевдонимы: **${prefix}${command.name
 		channel.send(
 			new Discord.MessageEmbed()
 			.setTitle(`Помощь по команде: ${command.name}`)
-			.setDescription(`Название: **${command.name}**\nОписание: **${command.description}**\n${data}\n\nКатегория: **${command.category}**`)
+			.setDescription(`Название: **${command.name}**\nОписание: **${command.description}**\nИспользование: **${prefix}${command.name} ${command.use || '(Использование не показано)'}**\n\nКатегория: **${command.category}**`)
 	  .setColor(0x303136)
 		)
 	}
+}
 }

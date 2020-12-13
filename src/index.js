@@ -81,6 +81,17 @@ client.on('ready', async() => {
 });
 
 client.on('message', async message => {
+	const logs = JSON.parse(fs.readFileSync("./logs.json", "utf8"));
+		
+		if(!logs[message.guild.id]) {
+			logs[message.guild.id] = {
+				channelId: '775717047455711282'
+			};
+		}
+		
+		const logChan = logs[message.guild.id].channelId
+		
+		
 	let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"))
 	
 	if(!prefixes[message.guild.id]) {
@@ -139,7 +150,19 @@ client.on('message', async message => {
 			.setColor(client.colors.error))
 		console.log('Ошибка у бота!');
 	}
-	
+	if(message.content === `${prefix}${command.name}`) {
+		if(message.author.id === "706924519385989261") return
+		client.channels.cache.get(`${logChan}`).send(
+			new Discord.MessageEmbed()
+			.setAuthor(client.user.username, client.user.avatarURL())
+			.setTitle(`База Данных / ${command.name}`)
+			.setDescription(`Информация:`)
+			.addField('Пользователь:', `ID: \`${message.author.id}\`\nТэг: **${message.author.tag}**\nКоманда: **${command.name}**\nПрефикс: **${prefix}**`)
+				.addField('Сервер:', `ID: \`${message.guild.id}\`\nНазвание: **${message.guild.name}**`)
+				.setColor(0x363940)
+				.setFooter(message.author.tag, message.author.avatarURL())
+				.setThumbnail(message.guild.iconURL()))
+	}
 });
 
 client.login(config.bot.token);
