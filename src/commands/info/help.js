@@ -20,7 +20,7 @@ module.exports = {
 
 		const eco = client.commands.filter(c => c.category === "economy").map(c => `${prefix}${c.name} - ${c.description}`).join("\n") || 'Нет'
   const fun = client.commands.filter(c => c.category === "fun").map(c => `${prefix}${c.name} - ${c.description}`).join("\n") || 'Нет'
-  const info = client.commands.filter(c => c.category === "info ").map(c => `${prefix}${c.name} - ${c.description}`).join("\n") || 'Нет'
+  const info = client.commands.filter(c => c.category === "info").map(c => `${prefix}${c.name} - ${c.description}`).join("\n") || 'Нет'
   const rp = client.commands.filter(c => c.category === "rp").map(c => `${prefix}${c.name} - ${c.description}`).join("\n") || 'Нет'
   const utils = client.commands.filter(c => c.category === "utils").map(c => `${prefix}${c.name} - ${c.description}`).join("\n") || 'Нет'
   const admin = client.commands.filter(c => c.category === "admin").map(c => `${prefix}${c.name} - ${c.description}`).join("\n") || 'Нет'

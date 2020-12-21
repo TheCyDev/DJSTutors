@@ -1,9 +1,6 @@
 {
 	"bot":{
-	"token":"токен",
-	"prefix":"префикс"
-	},
-	"api":{
-		
+	"token":"token",
+	"prefix":"prefix"
 	}
 }

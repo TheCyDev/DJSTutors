@@ -77,7 +77,8 @@ fs.readdir('./commands/utils', (err, files)=> {
 });
 const cooldowns = new Discord.Collection()
 client.on('ready', async() => {
-	console.log('Ready');
+	console.log(`[DISCORD] Бот подключился как: ${client.user.tag}.`)
+		console.log(`[DATABASE] Подключение к базе данных успешно прошло.`)
 });
 
 client.on('message', async message => {
