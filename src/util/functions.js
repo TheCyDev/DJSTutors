@@ -119,6 +119,16 @@ fs.writeFile("./profile.json", JSON.stringify(profile), (err) => {
 	if (err) console.log(err)
 })	
       };
+      
+      /**
+       * @param {string} errText
+       */
+       const errEmbed = (errEmbed) => {
+       	new Discord.MessageEmbed()
+       	.setTitle('Ошибка!')
+       	.setDescription(errText)
+       	.setColor(0xFF0000);
+       };
  
  module.exports = {
  	Dating,
@@ -128,5 +138,6 @@ fs.writeFile("./profile.json", JSON.stringify(profile), (err) => {
  	red,
  	setServerPrefix,
  	setUserBalance,
- 	addUserBalance
+ 	addUserBalance,
+ 	errEmbed
  };

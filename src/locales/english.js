@@ -12,9 +12,10 @@ module.exports = {
 	NO: 'No'
 	},
 	MODERATION: {
-		REASON: 'Reason',
-		TARGET: 'Target',
-		TYPE: 'Type',
-		DURATION: 'Duration'
+		REASON: 'Reason: {reason}',
+		MEMBER: 'Member: {member}',
+		TYPE: 'Type: {type}',
+		DURATION: 'Duration: {duration}',
+		HAS_BEEN_BANNED: '{member} has been banned.\nReason: {reason}\nMember: {member}\nType: {type}\nDuration: {duration}'
 	}
 };
