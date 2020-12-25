@@ -129,6 +129,43 @@ fs.writeFile("./profile.json", JSON.stringify(profile), (err) => {
        	.setDescription(errText)
        	.setColor(0xFF0000);
        };
+            /**
+      * @param {string} userId
+      */
+      const getUserBalance = (userId) => {
+      	const profile = JSON.parse(fs.readFileSync("./profile.json", "utf8"));
+		
+		if(!profile[userId]) {
+			profile[userId] = {
+				moneys: 0,
+				pets: {
+					cow: 0,
+					chicken: 0
+				}
+			}
+		}
+		
+		profile[userId].moneys
+}
+/**
+ * @param {string} userId
+ */
+ const getUserById = (userId) => {
+      	const profile = JSON.parse(fs.readFileSync("./profile.json", "utf8"));
+		
+		if(!profile[userId]) {
+			profile[userId] = {
+				moneys: 0,
+				pets: {
+					cow: 0,
+					chicken: 0
+				}
+			}
+		}
+		if(userId) {
+		profile[userId]
+		}
+ }
  
  module.exports = {
  	Dating,
@@ -139,5 +176,7 @@ fs.writeFile("./profile.json", JSON.stringify(profile), (err) => {
  	setServerPrefix,
  	setUserBalance,
  	addUserBalance,
- 	errEmbed
+ 	errEmbed,
+ 	getUserById,
+ 	getUserBalance
  };

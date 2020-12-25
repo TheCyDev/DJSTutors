@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const os = require('os')
+const { getUserBalance } = require('../../util/functions')
 module.exports = {
   name: "eval",
   description: "Eval",
@@ -8,6 +9,7 @@ module.exports = {
   aliases: ['ebal', 'e'],
   admin: true,
   async execute(client, message, args) {
+  	let mons = getUserBalance(message.author.id)
   	const database = `Eval {
  id: ${message.author.id},
  username: ${message.author.username},

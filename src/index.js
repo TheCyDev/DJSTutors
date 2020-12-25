@@ -3,6 +3,7 @@ const pg = require('pg');
 const fs = require('fs');
 const ms = require('ms');
 const client = new Discord.Client();
+const bot = new Discord.Client();
 const config = require('./config.json');
 
 client.commands = new Discord.Collection();
@@ -76,7 +77,8 @@ fs.readdir('./commands/utils', (err, files)=> {
 	})
 });
 const cooldowns = new Discord.Collection()
-client.on('ready', async() => {
+client.once('ready', async() => {
+	client.user.setStatus('idle')
 	console.log(`[DISCORD] Бот подключился как: ${client.user.tag}.`)
 		console.log(`[DATABASE] Подключение к базе данных успешно прошло.`)
 });
